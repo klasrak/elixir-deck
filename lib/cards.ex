@@ -1,6 +1,26 @@
 defmodule Cards do
   def create_deck do
-    ["Ace", "Two", "Three"]
+    ranks = [
+      "Ace",
+      "Two",
+      "Three",
+      "Four",
+      "Five",
+      "Six",
+      "Seven",
+      "Eight",
+      "Nine",
+      "Ten",
+      "Jack",
+      "Queen",
+      "King"
+    ]
+
+    suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
+
+    for suit <- suits, rank <- ranks do
+      "#{rank} of #{suit}"
+    end
   end
 
   def shuffle(deck) do
